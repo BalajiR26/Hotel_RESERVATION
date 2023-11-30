@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Room Booking</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hotel Room Booking</h1>
+
+    <form action="process_booking.jsp" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="check-in-date">Check-in Date:</label>
+        <input type="date" id="check-in-date" name="check-in-date" required><br><br>
+
+        <label for="check-out-date">Check-out Date:</label>
+        <input type="date" id="check-out-date" name="check-out-date" required><br><br>
+
+        <label for="room-type">Room Type:</label>
+        <select id="room-type" name="room-type">
+            <option value="single">Single Bed</option>
+            <option value="double">Double Bed</option>
+            <option value="suite">Suite</option>
+        </select><br><br>
+
+        <label>Additional Services:</label><br>
+        <input type="radio" id="breakfast" name="services" value="breakfast">
+        <label for="breakfast">Breakfast</label><br>
+        <input type="radio" id="parking" name="services" value="parking">
+        <label for="parking">Parking</label><br>
+        <input type="radio" id="wifi" name="services" value="wifi">
+        <label for="wifi">Wi-Fi</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
